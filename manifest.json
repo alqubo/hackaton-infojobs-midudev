@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Infojobs Assistant",
+  "version": "1.0.0",
+  "description": "Asistente personal para ofertas de trabajo en Infojobs",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "clipboardWrite"
+  ],
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": ["https://www.infojobs.net/*"]
+    }
+  ]
+}
