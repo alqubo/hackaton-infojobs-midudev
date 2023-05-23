@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const USER_DATA_KEY = 'user_data'
 
 function App() {
-  const [userData, setUserData] = useState({name: '', description: ''});
+  const [userData, setUserData] = useState({name: '', description: '', apikey: ''});
 
   useEffect(() => {
     (async () => {
@@ -47,6 +47,19 @@ function App() {
         <h1 className="text-[#2d3133] text-xl">Assistant</h1>
       </header>
       <section className="mt-8 w-full">
+        <div className="mb-4">
+          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="apikey">
+            OpenAI API Key
+          </label>
+          <input
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="apikey"
+            type="password"
+            value={userData.apikey}
+            placeholder="sk-****"
+            onChange={createHandleChange('apikey')}
+          />
+        </div>
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
             ¿Como te llamas?
