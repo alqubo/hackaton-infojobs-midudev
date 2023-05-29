@@ -40,6 +40,11 @@ This will install the React app as a Chrome extension.
 
 When you click the extension icon, you will see the React app, rendered as an extension popup.
 
+## How to use
+
+1. Complete the form accessing from the extension
+2. Go to the detail of a job offer and it will automatically calculate the affinity.
+
 ## Authors
 - [@alqubo](https://www.github.com/alqubo)
 
